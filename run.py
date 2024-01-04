@@ -77,4 +77,4 @@ if uploaded_file is not None:
                 '</div>', unsafe_allow_html=True
             )
         else:
-            st.sidebar.write("No categorical values in dataset.")
+            st.sidebar.write("No categorical values in dataset!")
