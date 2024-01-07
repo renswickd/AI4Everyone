@@ -63,8 +63,8 @@ if uploaded_file is not None:
         
         # Display the updated dataset shape after removing junk columns
         st.sidebar.markdown("## Updated Dataset Shape")
-        st.sidebar.markdown(f'<span style="color:green;">Number of Rows:</span> {df_highlighted.shape[0]}', unsafe_allow_html=True)
-        st.sidebar.markdown(f'<span style="color:green;">Number of Columns:</span> {df_highlighted.shape[1]}', unsafe_allow_html=True)
+        st.sidebar.text(f"Number of Rows: {df_highlighted.shape[0]}")
+        st.sidebar.text(f"Number of Columns: {df_highlighted.shape[1]}")
         
         # Ask if dataset has categorical values
         categorical = st.sidebar.radio("Does your dataset have categorical values?", ("Yes", "No"))
@@ -77,4 +77,4 @@ if uploaded_file is not None:
                 '</div>', unsafe_allow_html=True
             )
         else:
-            st.sidebar.write("No categorical values in dataset!")
+            st.sidebar.write("No categorical values in dataset.")
